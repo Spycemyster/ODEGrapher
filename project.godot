@@ -20,6 +20,10 @@ window/size/width=700
 window/size/height=800
 window/size/resizable=false
 
+[mono]
+
+export/include_scripts_content=true
+
 [physics]
 
 common/enable_pause_aware_picking=true

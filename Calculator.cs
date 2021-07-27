@@ -462,36 +462,36 @@ public class MathMethods
         return (float)Math.Abs(x);
     }
 
-    /// <summary>
-    /// Differentiates the function at the given position.
-    /// </summary>
-    /// <param name="eq"></param>
-    /// <param name="at"></param>
-    /// <param name="step"></param>
-    /// <returns></returns>
-    public float diff(Func<float, float> eq, float at, float step = 0.0000001f)
-    {
-        return (eq.Invoke(at + step) - eq.Invoke(at)) / step;
-    }
+    // /// <summary>
+    // /// Differentiates the function at the given position.
+    // /// </summary>
+    // /// <param name="eq"></param>
+    // /// <param name="at"></param>
+    // /// <param name="step"></param>
+    // /// <returns></returns>
+    // public float diff(Func<float, float> eq, float at, float step = 0.0000001f)
+    // {
+    //     return (eq.Invoke(at + step) - eq.Invoke(at)) / step;
+    // }
     
-    /// <summary>
-    /// Calculates the integral of the function for the given bounds.
-    /// </summary>
-    /// <param name="eq"></param>
-    /// <param name="left"></param>
-    /// <param name="right"></param>
-    /// <param name="rectNum"></param>
-    /// <returns></returns>
-    public float integrate(Func<float, float> eq, float left, float right, int rectNum = 100)
-    {
-        float integral = 0.0f;
-        float dx = (right - left) / rectNum;
-        for (int i = 0; i < rectNum; i++)
-        {
-            integral += dx * eq.Invoke(i * dx + left);
-        }
-        return integral;
-    }
+    // /// <summary>
+    // /// Calculates the integral of the function for the given bounds.
+    // /// </summary>
+    // /// <param name="eq"></param>
+    // /// <param name="left"></param>
+    // /// <param name="right"></param>
+    // /// <param name="rectNum"></param>
+    // /// <returns></returns>
+    // public float integrate(Func<float, float> eq, float left, float right, int rectNum = 100)
+    // {
+    //     float integral = 0.0f;
+    //     float dx = (right - left) / rectNum;
+    //     for (int i = 0; i < rectNum; i++)
+    //     {
+    //         integral += dx * eq.Invoke(i * dx + left);
+    //     }
+    //     return integral;
+    // }
     #endregion
 }
 
