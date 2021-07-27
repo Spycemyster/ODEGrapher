@@ -351,11 +351,11 @@ public class MathMethods
     {
         MethodInfo[] inf = typeof(MathMethods).GetMethods();
         FieldInfo[] fInf = typeof(MathMethods).GetFields();
-        FunctionNames = new string[inf.Length + fInf.Length - 4];
+        FunctionNames = new string[inf.Length + fInf.Length - 6];
         int j = 0;
         for (int i = 0; i < inf.Length; i++)
         {
-            if (inf[i].Name == "Equals" || inf[i].Name == "GetHashCode" || inf[i].Name == "GetType" || inf[i].Name == "ToString")
+            if (inf[i].Name == "Equals" || inf[i].Name == "GetHashCode" || inf[i].Name == "GetType" || inf[i].Name == "ToString" || inf[i].Name == "Initialize")
             {
                 continue;
             }
@@ -364,8 +364,18 @@ public class MathMethods
         }
         for (int i = 0; i < fInf.Length; i++)
         {
+            if (fInf[i].Name == "FunctionNames")
+                continue;
             FunctionNames[j++] = fInf[i].Name;
         }
+
+        GD.Print("List of available functions (some might be buggy!)");
+        for (int i = 0; i < FunctionNames.Length; i++)
+        {
+            GD.Print(FunctionNames[i]);
+        }
+
+        GD.Print("Have fun!");
     }
 
     #region Power Functions
