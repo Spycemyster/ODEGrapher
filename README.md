@@ -4,6 +4,15 @@ A first order ordinary differential equation grapher. Built in Godot.
 ## Equation Syntax
 Write the equation in the same form as you would in C# coding language.
 y'=`sqrt(x) + exp(x)` is equivalent to \[y'=\sqrt x + e^x\]
+Parenthesis are necessary when applying functions to numbers and variables AND for specifying order of operations.
+$y'=2x$ (**INCORRECT SYNTAX**)
+$y'=2 * x$ (**PROPER SYNTAX**)
+
+- $+$ Add
+- $-$ Subtract
+- $*$ Multiply
+- $/$ Divide
+
 The list of all functions and their syntaxes are below.
 ## Functions
 #### exp (a)
